@@ -5,4 +5,7 @@
  * 
  */
  
+ /*Load settings*/
+ require_once('settings.php');
+ 
  ?>
