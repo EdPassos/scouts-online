@@ -7,5 +7,6 @@
  
  /*Load settings*/
  require_once('settings.php');
+ require_once(SOUI . 'design.php');
  
  ?>
