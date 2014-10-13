@@ -5,6 +5,8 @@ define('SOPATH', dirname(__FILE__) . '/'); #ScoutsOnline instalation
 define('SODATA', SOPATH . 'data/'); #Database related files
 define('SOCONTENT', SOPATH . 'content/'); #Content Generator Files
 define('SOUI', SOPATH . 'ui/'); #Files that generate what we see on the browser
+
+define('SOURL', "http://scouts.edpassos.ovh.pt/");
 	
 ## Database settings
 define('SODBTYPE', "mysql"); # Only mysql is supported at the moment

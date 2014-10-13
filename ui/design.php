@@ -1,19 +1,28 @@
+<?php require_once(SOCONTENT . 'content.php'); ?>
 <!DOCTYPE html>
 <html>
+
 <head>
-<?php
-
-require_once(SOCONTENT . 'content.php');
-
-echo "<title>" . SOPAGENAME . "</title>
-";
-
-?>
+	<title><?php getPageTitle(); ?></title>
 </head>
+
 <body>
-<?php
 
-echo getLogin();
+<div id="menu">
+	<form action="index.php" method="post">
+	<?php foreach(getMenu() as $item) { ?>
+		<input type="submit" name=<?php echo "'$item'";?> value=<?php echo "'$item'";?>>
+	</form>
+	<?php }?>
+	
+</div>
 
-?>
+<?php if(hasContent()) { ?>
+<div id="content">
+	<?php getContent(); ?>
+	
+</div>
+<?php }?>
 </body>
+
+</html>

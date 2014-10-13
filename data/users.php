@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 require_once(SODATA . 'database.php');
 
 $so_users_table = "soUsers";
@@ -42,4 +42,8 @@ function getSessionUser($session) {
 	return NULL;
 }
 
+
+function isLogged() {
+	return false;
+}
 ?>
