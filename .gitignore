@@ -12,6 +12,9 @@
 !/log/.keep
 /tmp
 
+# Ignore database.yml
+database.yml
+
 # vim files
 *.swp
 *.swo
