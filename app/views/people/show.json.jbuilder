@@ -1,0 +1,1 @@
+json.extract! @person, :id, :name, :citizenship, :birthdate, :baptismdate, :address, :zipcode_area, :zipcode_building, :taxid, :socialsecurity, :idnumber, :phonenumber, :email, :maritalstatus, :created_at, :updated_at
