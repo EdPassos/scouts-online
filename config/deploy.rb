@@ -17,7 +17,7 @@ set :deploy_user, "scouts"
 set :use_sudo, false
 # set :rails_env, "production"
 set :deploy_via, :copy
-ssh_options[:forward_agent] = true
+set :ssh_options, { :forward_agent => true }
 server "scouts.edpassos.ovh"
 
 # Default value for :format is :pretty
