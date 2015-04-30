@@ -5,7 +5,7 @@ set :branch, "master"
 # app side by side. Also provides quick sanity checks when looking
 # at filepaths
 set :full_app_name, "#{fetch(:application)}_#{fetch(:stage)}"
-set :server_name, "scouts.edpassos.ovh"
+set :server_name, "edpassos.ovh"
 
 
 # server-based syntax
