@@ -21,11 +21,11 @@
   </div>
   <div class="field">
     <%= f.label :birthdate %><br>
-    <%= f.date_select :birthdate %>
+    <%= f.date_select :birthdate, start_year: 100.years.ago.year %>
   </div>
   <div class="field">
     <%= f.label :baptismdate %><br>
-    <%= f.date_select :baptismdate %>
+    <%= f.date_select :baptismdate, start_year: 100.years.ago.year %>
   </div>
   <div class="field">
     <%= f.label :address %><br>
