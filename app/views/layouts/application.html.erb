@@ -13,8 +13,13 @@
   </head>
 
   <body>
+	<p class="notice"><%= notice %></p>
+	<p class="alert"><%= alert %></p>
 
-    <%= yield %>
+	<%= link_to 'login', new_user_session_path %>
+	<div class='row'>
+		<%= yield %>
+	</div>
 
   </body>
 </html>
