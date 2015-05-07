@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+    <title>Scouts Online | <%= content_for?(:title) ? yield(:title) : "Scouts Managment System" %></title>
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
@@ -17,9 +17,6 @@
 
 	<p class="notice"><%= notice %></p>
 	<p class="alert"><%= alert %></p>
-
-	<%= link_to 'login', new_user_session_path %>
-	<%= link_to 'registar', new_user_registration_path %>
 
 	<div class='row'>
 		<%= yield %>
