@@ -13,10 +13,14 @@
   </head>
 
   <body>
+	<%= render 'layouts/navbar' %>
+
 	<p class="notice"><%= notice %></p>
 	<p class="alert"><%= alert %></p>
 
 	<%= link_to 'login', new_user_session_path %>
+	<%= link_to 'registar', new_user_registration_path %>
+
 	<div class='row'>
 		<%= yield %>
 	</div>
