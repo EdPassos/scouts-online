@@ -15,10 +15,24 @@
   <body>
 	<%= render 'layouts/navbar' %>
 
-	<p class="notice"><%= notice %></p>
-	<p class="alert"><%= alert %></p>
+	<% if notice %>
+		<div class='row'>
+			<div class="notice columns medium-4 medium-offset-4 alert-box" data-alert>
+				<a href="#" class="close">&times;</a>
+				<%= notice %>
+			</div>
+		</div>
+	<% end %>
+	<% if alert %>
+		<div class='row'>
+			<div class="alert columns medium-4 medium-offset-4 alert-box" data-alert>
+				<a href="#" class="close">&times;</a>
+				<%= alert %>
+			</div>
+		</div>
+	<% end %>
 
-	<div class='row'>
+	<div class='row collapse'>
 		<%= yield %>
 	</div>
 
