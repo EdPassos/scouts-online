@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  members: MyString
+  groups: MyString
+  minimum_age: 
+  maximum_age: 
+  description: MyText
+
+two:
+  name: MyString
+  members: MyString
+  groups: MyString
+  minimum_age: 
+  maximum_age: 
+  description: MyText

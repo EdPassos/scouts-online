@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @section.name %>
+</p>
+
+<p>
+  <strong>Members:</strong>
+  <%= @section.members %>
+</p>
+
+<p>
+  <strong>Groups:</strong>
+  <%= @section.groups %>
+</p>
+
+<p>
+  <strong>Minimum age:</strong>
+  <%= @section.minimum_age %>
+</p>
+
+<p>
+  <strong>Maximum age:</strong>
+  <%= @section.maximum_age %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @section.description %>
+</p>
+
+<%= link_to 'Edit', edit_section_path(@section) %> |
+<%= link_to 'Back', sections_path %>

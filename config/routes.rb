@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :sections
   get 'pages/welcome'
   get 'profile' => 'pages#profile'
 
