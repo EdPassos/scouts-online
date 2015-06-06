@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'pages/welcome'
+  get 'profile' => 'pages#profile'
 
   devise_for :users
 

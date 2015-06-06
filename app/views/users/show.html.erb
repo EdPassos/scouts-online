@@ -1,0 +1,108 @@
+<div class='columns'>
+	<div class='row'>
+		<%= content_tag :h2, 'Detalhes de utilizador' %>
+	</div>
+	<div class='row'>
+		<div class='columns small-3'>
+			<%= content_tag :span, 'Email', class: 'right' %>
+		</div>
+		<div class='columns small-9'>
+			<%= content_tag :span, @user.email %>
+		</div>
+	</div>
+	<div class='row'>
+		<%= content_tag :h2, 'Detalhes Pessoais' %>
+	</div>
+	<% if @user.person %>
+		<div class='row'>
+			<div class='columns small-3'>
+				<%= content_tag :span, 'Nome', class: 'right' %>
+			</div>
+			<div class='columns small-9'>
+				<%= content_tag :span, @user.person.name %>
+			</div>
+		</div>
+		<div class='row'>
+			<div class='columns small-3'>
+				<%= content_tag :span, 'Nacionalidade', class: 'right' %>
+			</div>
+			<div class='columns small-9'>
+				<%= content_tag :span, @user.person.citizenship %>
+			</div>
+		</div>
+		<div class='row'>
+			<div class='columns small-3'>
+				<%= content_tag :span, 'Data de Nascimento', class: 'right' %>
+			</div>
+			<div class='columns small-9'>
+				<%= content_tag :span, @user.person.birthdate %>
+			</div>
+		</div>
+		<div class='row'>
+			<div class='columns small-3'>
+				<%= content_tag :span, 'Data de Batismo', class: 'right' %>
+			</div>
+			<div class='columns small-9'>
+				<%= content_tag :span, @user.person.baptismdate %>
+			</div>
+		</div>
+		<div class='row'>
+			<div class='columns small-3'>
+				<%= content_tag :span, 'Morada', class: 'right' %>
+			</div>
+			<div class='columns small-9'>
+				<%= content_tag :span, @user.person.address %>
+			</div>
+		</div>
+		<div class='row'>
+			<div class='columns small-3'>
+				<%= content_tag :span, 'Código Postal', class: 'right' %>
+			</div>
+			<div class='columns small-9'>
+				<%= content_tag :span, @user.person.zipcode_area.to_s + '-' + @user.person.zipcode_building.to_s  %>
+			</div>
+		</div>
+		<div class='row'>
+			<div class='columns small-3'>
+				<%= content_tag :span, 'Contribuinte', class: 'right' %>
+			</div>
+			<div class='columns small-9'>
+				<%= content_tag :span, @user.person.taxid %>
+			</div>
+		</div>
+		<div class='row'>
+			<div class='columns small-3'>
+				<%= content_tag :span, 'Segurança Social', class: 'right' %>
+			</div>
+			<div class='columns small-9'>
+				<%= content_tag :span, @user.person.socialsecurity %>
+			</div>
+		</div>
+		<div class='row'>
+			<div class='columns small-3'>
+				<%= content_tag :span, 'Nº de Identificação Civil', class: 'right' %>
+			</div>
+			<div class='columns small-9'>
+				<%= content_tag :span, @user.person.idnumber %>
+			</div>
+		</div>
+		<div class='row'>
+			<div class='columns small-3'>
+				<%= content_tag :span, 'Telefone', class: 'right' %>
+			</div>
+			<div class='columns small-9'>
+				<%= content_tag :span, @user.person.phonenumber %>
+			</div>
+		</div>
+		<div class='row'>
+			<div class='columns small-3'>
+				<%= content_tag :span, 'Estado Civil', class: 'right' %>
+			</div>
+			<div class='columns small-9'>
+				<%= content_tag :span, @user.person.maritalstatus %>
+			</div>
+		</div>
+	<% else %>
+		<%= button_tag 'Adicionar dados pessoais' %>
+	<% end %>
+</div>
