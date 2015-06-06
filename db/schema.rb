@@ -13,6 +13,30 @@
 
 ActiveRecord::Schema.define(version: 20150606114739) do
 
+  create_table "authors", force: :cascade do |t|
+    t.string   "name",        limit: 255
+    t.text     "description", limit: 65535
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
+
+  create_table "books", force: :cascade do |t|
+    t.string   "title",      limit: 255
+    t.text     "resume",     limit: 65535
+    t.integer  "author_id",  limit: 4
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
+
+  add_index "books", ["author_id"], name: "index_books_on_author_id", using: :btree
+
+  create_table "categories", force: :cascade do |t|
+    t.string   "name",        limit: 255
+    t.text     "description", limit: 65535
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
+
   create_table "people", force: :cascade do |t|
     t.string   "name",             limit: 255
     t.string   "citizenship",      limit: 255
@@ -51,5 +75,6 @@ ActiveRecord::Schema.define(version: 20150606114739) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "books", "authors"
   add_foreign_key "people", "users"
 end
