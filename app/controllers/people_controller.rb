@@ -40,6 +40,9 @@ class PeopleController < ApplicationController
   # PATCH/PUT /people/1
   # PATCH/PUT /people/1.json
   def update
+	if params[:person][:section_id]
+		@person.section = Section.find(params[:person][:section_id])
+	end
     respond_to do |format|
       if @person.update(person_params)
         format.html { redirect_to @person, notice: 'Person was successfully updated.' }
@@ -69,6 +72,6 @@ class PeopleController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def person_params
-      params.require(:person).permit(:name, :citizenship, :birthdate, :baptismdate, :address, :zipcode_area, :zipcode_building, :taxid, :socialsecurity, :idnumber, :phonenumber, :maritalstatus)
+      params.require(:person).permit(:name, :citizenship, :birthdate, :baptismdate, :address, :zipcode_area, :zipcode_building, :taxid, :socialsecurity, :idnumber, :phonenumber, :maritalstatus, :section)
     end
 end

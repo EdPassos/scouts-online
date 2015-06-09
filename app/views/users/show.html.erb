@@ -102,6 +102,14 @@
 				<%= content_tag :span, @user.person.maritalstatus %>
 			</div>
 		</div>
+		<div class='row'>
+			<div class='columns small-3'>
+				<%= content_tag :span, 'Secção', class: 'right' %>
+			</div>
+			<div class='columns small-9'>
+				<%= content_tag :span, @user.person.section.name if @user.person.section %>
+			</div>
+		</div>
 	<% else %>
 		<%= link_to 'Adicionar dados pessoais', new_person_path, class: 'button' %>
 	<% end %>

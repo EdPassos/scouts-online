@@ -23,7 +23,7 @@
         <td><%= section.groups %></td>
         <td><%= section.minimum_age %></td>
         <td><%= section.maximum_age %></td>
-        <td><%= section.description %></td>
+        <td><%= simple_format section.description %></td>
         <td><%= link_to 'Show', section %></td>
         <td><%= link_to 'Edit', edit_section_path(section) %></td>
         <td><%= link_to 'Destroy', section, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -27,7 +27,7 @@
 
 <p>
   <strong>Description:</strong>
-  <%= @section.description %>
+  <%= simple_format @section.description %>
 </p>
 
 <%= link_to 'Edit', edit_section_path(@section) %> |
