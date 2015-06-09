@@ -24,8 +24,12 @@ class PeopleController < ApplicationController
   # POST /people
   # POST /people.json
   def create
-    @person = Person.new(person_params)
-	@person.user = current_user
+	@person = Person.new(person_params)
+	if params[:person][:user_id] != ""
+		@person.user = User.find(params[:person][:user_id])
+	else
+		@person.user = current_user
+	end
     respond_to do |format|
       if @person.save
         format.html { redirect_to @person, notice: 'Person was successfully created.' }

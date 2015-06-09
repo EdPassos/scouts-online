@@ -59,10 +59,16 @@
     <%= f.label :maritalstatus %><br>
     <%= f.text_field :maritalstatus %>
   </div>
-  <div class="field">
-    <%= f.label :section %><br>
-	<%= collection_select(:person, :section_id, Section.all, :id, :name, {:prompt => true}) %>
-  </div>
+  <% if current_user.email == 'ed.passos@gmail.com' %>
+	  <div class="field">
+		<%= f.label :section %><br>
+		<%= collection_select(:person, :section_id, Section.all, :id, :name, {:prompt => true}) %>
+	  </div>
+	  <div class="field">
+		<%= f.label :user %><br>
+		<%= collection_select(:person, :user_id, User.all, :id, :email, {:prompt => true}) %>
+	  </div>
+  <% end %>
   <div class="actions">
     <%= f.submit %>
   </div>
